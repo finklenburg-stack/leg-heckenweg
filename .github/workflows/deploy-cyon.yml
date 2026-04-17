@@ -1,0 +1,21 @@
+name: Deploy to cyon.ch
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy via rsync
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avzr --delete --exclude='.git*' --exclude='.github'
+          path: ./
+          remote_path: ${{ secrets.CYON_PATH }}
+          remote_host: ${{ secrets.CYON_HOST }}
+          remote_user: ${{ secrets.CYON_USER }}
+          remote_key: ${{ secrets.CYON_SSH_KEY }}
