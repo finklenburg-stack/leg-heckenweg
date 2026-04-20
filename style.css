@@ -196,22 +196,23 @@ h2 {
 .tariff-box-subtitle {
   font-weight: 700; font-size: .8rem;
   color: var(--dark); text-transform: uppercase; letter-spacing: .05em;
-  margin: .8rem 0 .3rem;
+  margin: 1rem 0 .3rem;
+  padding-top: .8rem; border-top: 2px solid #e8ede9;
 }
 .tariff-box-highlight .tariff-box-title { border-color: var(--green); }
 
 .tariff-row {
   display: flex; justify-content: space-between;
   font-size: .9rem; padding: .3rem 0;
-  border-bottom: 1px solid #f0f4f1;
 }
-.tariff-row:last-of-type { border-bottom: none; }
 .tariff-row-sub { color: #7a8e80; font-size: .85rem; }
 .tariff-row-total {
   font-weight: 700; color: var(--dark);
-  border-top: 2px solid #e8ede9 !important;
-  border-bottom: none !important;
-  margin-top: .4rem; padding-top: .5rem;
+  margin-top: .6rem; padding-top: .5rem;
+  border-top: 2px solid #e8ede9;
+}
+.tariff-box-highlight .tariff-row-total {
+  border-top-color: #b8dfc6;
 }
 .tariff-row-discount {
   color: var(--green); font-weight: 600;
@@ -220,7 +221,6 @@ h2 {
 .tariff-row-after {
   font-weight: 800; font-size: 1rem;
   color: var(--green); padding: .4rem 0;
-  border-top: 1px solid #b8dfc6 !important;
 }
 
 .tariff-badge {
