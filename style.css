@@ -175,34 +175,76 @@ h2 {
 #preise { background: var(--grey); }
 
 .tariff-split {
-  display: flex; align-items: center; gap: 1rem;
-  flex-wrap: wrap; margin-bottom: 1.5rem;
+  display: flex; align-items: flex-start; gap: 1rem;
+  flex-wrap: wrap; margin-bottom: 1rem;
 }
-.tariff-col {
-  flex: 1; min-width: 200px;
+.tariff-box {
+  flex: 1; min-width: 240px;
   background: #fff; border-radius: var(--radius);
-  padding: 1.8rem 1.5rem; text-align: center;
-  border: 1.5px solid #dce8df;
+  padding: 1.5rem; border: 1.5px solid #dce8df;
+  position: relative;
 }
-.tariff-col.tariff-net {
+.tariff-box-highlight {
   border-color: var(--green);
   box-shadow: 0 0 0 3px rgba(45,140,78,.10);
 }
-.tariff-col.tariff-total {
-  background: var(--grey);
+.tariff-box-title {
+  font-weight: 800; font-size: 1rem;
+  color: var(--dark); margin-bottom: 1rem;
+  padding-bottom: .5rem; border-bottom: 2px solid #e8ede9;
 }
-.tariff-icon { font-size: 2rem; margin-bottom: .5rem; }
-.tariff-label { font-weight: 700; font-size: 1rem; margin-bottom: .2rem; }
-.tariff-sub { font-size: .8rem; color: #7a8e80; margin-bottom: .8rem; min-height: 2.4em; }
-.tariff-price { font-size: 2rem; font-weight: 800; color: var(--dark); line-height: 1; }
-.tariff-note { font-size: .8rem; color: #7a8e80; margin-top: .4rem; }
+.tariff-box-highlight .tariff-box-title { border-color: var(--green); }
+
+.tariff-row {
+  display: flex; justify-content: space-between;
+  font-size: .9rem; padding: .3rem 0;
+  border-bottom: 1px solid #f0f4f1;
+}
+.tariff-row:last-of-type { border-bottom: none; }
+.tariff-row-sub { color: #7a8e80; font-size: .85rem; }
+.tariff-row-total {
+  font-weight: 700; color: var(--dark);
+  border-top: 2px solid #e8ede9 !important;
+  border-bottom: none !important;
+  margin-top: .4rem; padding-top: .5rem;
+}
+.tariff-row-discount {
+  color: var(--green); font-weight: 600;
+  font-size: .9rem; padding: .3rem 0;
+}
+.tariff-row-after {
+  font-weight: 800; font-size: 1rem;
+  color: var(--green); padding: .4rem 0;
+  border-top: 1px solid #b8dfc6 !important;
+}
+
+.tariff-badge {
+  display: inline-block; border-radius: 50px;
+  padding: .2rem .8rem; font-size: .75rem; font-weight: 700;
+  margin-top: .8rem;
+}
+.tariff-badge-neutral { background: #f0f4f1; color: #7a8e80; }
+.tariff-badge-green { background: var(--green-l); color: var(--green); }
+
 .tariff-plus {
   font-size: 1.8rem; font-weight: 300; color: #aab8ae;
-  flex-shrink: 0;
+  flex-shrink: 0; align-self: center;
 }
+
+.tariff-result {
+  background: var(--dark); color: #fff;
+  border-radius: var(--radius); padding: 1.5rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: .5rem; margin-bottom: .5rem;
+}
+.tariff-result-label { font-size: 1rem; opacity: .8; }
+.tariff-result-price { font-size: 2.4rem; font-weight: 800; }
+.tariff-result-price span { font-size: 1rem; font-weight: 400; opacity: .8; }
+.tariff-result-sub { font-size: .85rem; opacity: .7; width: 100%; }
+
 @media (max-width: 680px) {
   .tariff-split { flex-direction: column; }
-  .tariff-plus { transform: rotate(90deg); }
+  .tariff-plus { align-self: auto; }
 }
 
 .savings-box {

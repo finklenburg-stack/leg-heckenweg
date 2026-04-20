@@ -132,48 +132,80 @@
     <p class="lead">Deine Stromrechnung besteht aus zwei ungefähr gleich grossen Teilen. Auf einen davon bekommst du als LEG-Mitglied einen satten Rabatt. Alle Preise inkl. MWST.</p>
 
     <div class="tariff-split">
-      <div class="tariff-col tariff-energy">
-        <div class="tariff-icon">⚡</div>
-        <div class="tariff-label">Energiepreis</div>
-        <div class="tariff-sub">ewb.Öko.STROM Home</div>
-        <div class="tariff-price">15.03 Rp.</div>
-        <div class="tariff-note">pro kWh · bleibt gleich</div>
+
+      <!-- LINKS: Stromlieferung -->
+      <div class="tariff-box">
+        <div class="tariff-box-title">Stromlieferung</div>
+        <div class="tariff-row">
+          <span>ewb.Öko.STROM Home</span>
+          <span>15.03</span>
+        </div>
+        <div class="tariff-row tariff-row-sub">
+          <span>Abgaben Gemeinde</span>
+          <span>2.86</span>
+        </div>
+        <div class="tariff-row tariff-row-sub">
+          <span>Bundesabgaben</span>
+          <span>2.49</span>
+        </div>
+        <div class="tariff-row tariff-row-total">
+          <span>Total</span>
+          <span>20.38 Rp./kWh</span>
+        </div>
+        <div class="tariff-badge tariff-badge-neutral">kein Rabatt</div>
       </div>
+
       <div class="tariff-plus">+</div>
-      <div class="tariff-col tariff-net">
-        <div class="tariff-icon">🔌</div>
-        <div class="tariff-label">Netznutzung + Abgaben</div>
-        <div class="tariff-sub">Netz, SDL, Stromreserve, Bund &amp; Gemeinde</div>
-        <div class="tariff-price">19.43 Rp.</div>
-        <div class="tariff-note">pro kWh · <strong>hier greift der LEG-Rabatt</strong></div>
+
+      <!-- RECHTS: Netznutzung -->
+      <div class="tariff-box tariff-box-highlight">
+        <div class="tariff-box-title">Netznutzung</div>
+        <div class="tariff-row">
+          <span>Arbeitstarif</span>
+          <span>13.30</span>
+        </div>
+        <div class="tariff-row tariff-row-sub">
+          <span>Systemdienstleistungen</span>
+          <span>0.29</span>
+        </div>
+        <div class="tariff-row tariff-row-sub">
+          <span>Zuschlag Übertragungsnetz</span>
+          <span>0.05</span>
+        </div>
+        <div class="tariff-row tariff-row-sub">
+          <span>Stromreserve</span>
+          <span>0.44</span>
+        </div>
+        <div class="tariff-row tariff-row-total">
+          <span>Total</span>
+          <span>14.08 Rp./kWh</span>
+        </div>
+        <div class="tariff-row tariff-row-discount">
+          <span>LEG-Rabatt 40 %</span>
+          <span>− 5.63</span>
+        </div>
+        <div class="tariff-row tariff-row-after">
+          <span>Nach Rabatt</span>
+          <span>8.45 Rp./kWh</span>
+        </div>
+        <div class="tariff-badge tariff-badge-green">− 40 % Rabatt</div>
       </div>
-      <div class="tariff-plus">=</div>
-      <div class="tariff-col tariff-total">
-        <div class="tariff-icon">📋</div>
-        <div class="tariff-label">Total ohne LEG</div>
-        <div class="tariff-sub">&nbsp;</div>
-        <div class="tariff-price">34.46 Rp.</div>
-        <div class="tariff-note">pro kWh</div>
-      </div>
+
     </div>
 
-    <div class="savings-box">
-      <div>
-        <strong>Mit LEG: 40 % Rabatt auf die Netznutzung</strong><br>
-        <span>Statt 14.08 Rp./kWh zahlst du nur noch <strong>8.45 Rp./kWh</strong> für die Netznutzung.</span>
-      </div>
-      <div class="savings-pct">
-        28.83 Rp.<br>
-        <small style="font-size:.85rem; font-weight:400;">pro kWh mit LEG</small>
-      </div>
+    <!-- TOTAL -->
+    <div class="tariff-result">
+      <div class="tariff-result-label">Preis im LEG</div>
+      <div class="tariff-result-price">28.83 <span>Rp./kWh</span></div>
+      <div class="tariff-result-sub">statt 34.46 Rp./kWh · du sparst 5.63 Rp. pro kWh</div>
     </div>
 
-    <div class="savings-box" style="background: linear-gradient(135deg, #1a3d28, #2d6e3f); margin-top: .75rem;">
+    <div class="savings-box" style="margin-top: 1rem;">
       <div>
         <strong>Beispiel: Haushalt mit 4 500 kWh/Jahr</strong><br>
-        <span>Du sparst ~5.63 Rp. pro kWh → rund <strong>CHF 250 pro Jahr</strong></span>
+        <span>5.63 Rp. × 4 500 kWh = rund <strong>CHF 253 pro Jahr</strong> gespart</span>
       </div>
-      <div class="savings-pct">~CHF 250<br><small style="font-size:.85rem;font-weight:400;">/ Jahr</small></div>
+      <div class="savings-pct">~CHF 253<br><small style="font-size:.85rem;font-weight:400;">/ Jahr</small></div>
     </div>
 
     <p style="margin-top:1rem; font-size:.85rem; color:#7a8e80;">
