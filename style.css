@@ -195,7 +195,7 @@ h2 {
 }
 .tariff-box-subtitle {
   font-weight: 700; font-size: .8rem;
-  color: #7a8e80; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--dark); text-transform: uppercase; letter-spacing: .05em;
   margin: .8rem 0 .3rem;
 }
 .tariff-box-highlight .tariff-box-title { border-color: var(--green); }
