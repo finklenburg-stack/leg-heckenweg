@@ -173,35 +173,37 @@ h2 {
 
 /* ── PRICING ── */
 #preise { background: var(--grey); }
-.price-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-.price-card {
+
+.tariff-split {
+  display: flex; align-items: center; gap: 1rem;
+  flex-wrap: wrap; margin-bottom: 1.5rem;
+}
+.tariff-col {
+  flex: 1; min-width: 200px;
   background: #fff; border-radius: var(--radius);
-  padding: 2rem; border: 1.5px solid #dce8df;
-  position: relative;
+  padding: 1.8rem 1.5rem; text-align: center;
+  border: 1.5px solid #dce8df;
 }
-.price-card.highlight {
+.tariff-col.tariff-net {
   border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(45,140,78,.12);
+  box-shadow: 0 0 0 3px rgba(45,140,78,.10);
 }
-.price-card.highlight::before {
-  content: 'LEG-Rabatt inklusive';
-  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-  background: var(--green); color: #fff;
-  border-radius: 50px; padding: .2rem .9rem; font-size: .75rem; font-weight: 700;
-  white-space: nowrap;
+.tariff-col.tariff-total {
+  background: var(--grey);
 }
-.price-card h3 { font-size: 1rem; color: #5a6e61; margin-bottom: .3rem; }
-.price-big { font-size: 2.4rem; font-weight: 800; color: var(--dark); line-height: 1; }
-.price-unit { font-size: .85rem; color: #7a8e80; margin-bottom: 1rem; }
-.price-note { font-size: .82rem; color: #7a8e80; margin-top: .8rem; padding-top: .8rem; border-top: 1px solid #e8ede9; }
-.price-detail-row {
-  display: flex; justify-content: space-between;
-  font-size: .9rem; padding: .35rem 0;
-  border-bottom: 1px solid #f0f4f1;
+.tariff-icon { font-size: 2rem; margin-bottom: .5rem; }
+.tariff-label { font-weight: 700; font-size: 1rem; margin-bottom: .2rem; }
+.tariff-sub { font-size: .8rem; color: #7a8e80; margin-bottom: .8rem; min-height: 2.4em; }
+.tariff-price { font-size: 2rem; font-weight: 800; color: var(--dark); line-height: 1; }
+.tariff-note { font-size: .8rem; color: #7a8e80; margin-top: .4rem; }
+.tariff-plus {
+  font-size: 1.8rem; font-weight: 300; color: #aab8ae;
+  flex-shrink: 0;
 }
-.price-detail-row:last-child { border-bottom: none; }
-.price-label { color: #5a6e61; }
-.price-val { font-weight: 600; }
+@media (max-width: 680px) {
+  .tariff-split { flex-direction: column; }
+  .tariff-plus { transform: rotate(90deg); }
+}
 
 .savings-box {
   background: linear-gradient(135deg, var(--green), #5ab87a);
